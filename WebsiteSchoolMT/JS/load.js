@@ -28,7 +28,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const bodyElement = document.body;
-
+    const clockElement = document.getElementById('clock');  // Clock element
     // Function to update the button's h1 text based on the current theme
     function updateButtonText() {
         const h1Element = themeToggleBtn.querySelector('#tabh1');
@@ -46,5 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggleBtn.addEventListener('click', function() {
         bodyElement.classList.toggle('light-mode');
         updateButtonText();
+    });
+     // Add the same event listener to the clock element
+     clockElement.addEventListener('click', function() {
+        bodyElement.classList.toggle('light-mode');
+        updateButtonText()
     });
 });
