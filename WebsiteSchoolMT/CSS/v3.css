@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between; /* Centers items horizontally */
     align-items: center; /* Centers items vertically */
-    
+    font-size: clamp(12px, 0.8vw, 20px);
     box-sizing: border-box;
 }
 
@@ -83,7 +83,7 @@ header {
     border-radius: 10px;
     
     background-color: rgba(55,202,229, 0);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out /* Smooth transition */
 }
 .transparent-text-wrapper.active {
     background-color: rgba(18,63,119); /* Highlight color when active */
@@ -94,22 +94,26 @@ header {
     opacity: 100%; /* Ensures the element is fully opaque */
     font-family: monospace; /* Sets the font family */
     text-align: center; /* Centers the text */
-    font-size: 0.8vw; /* Sets the font size */
+    /* Sets the font size */
+    font-size: inherit;
+
     padding: 8px; /* Adds padding inside the element */
     font-weight: bold;
-    
+    transition: transform 0.3s ease; /* Smooth text scaling on hover */
 }
 
 #tabh1Clock {
     opacity: 100%; /* Ensures the element is fully opaque */
     font-family: monospace; /* Sets the font family */
     text-align: center; /* Centers the text */
-    font-size: 0.8vw; /* Sets the font size */
+    font-size: inherit; /* Sets the font size */
     padding: 8px 10px; /* Adds padding inside the element */
-    
+    transition: transform 0.3s ease; /* Smooth text scaling on hover */
 }
 .transparent-text-wrapper:hover {
-    background-color: rgba(15,134,182, 1); /* Darkens the background on hover */
+    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
 }
 
 /* Dropdown menu header */
@@ -179,7 +183,7 @@ header {
 }
 
 #date{
-    font-size: 0.8vw !important;
+    font-size: inherit !important;
     text-align: center;
     font-family:  monospace;
 }
@@ -188,7 +192,7 @@ header {
     box-sizing: content-box;
     list-style: none;
     display: flex;
-    font-size: 0.8vw;
+    font-size: inherit;
     text-align: center;
     font-family:  monospace;
 }
@@ -220,7 +224,7 @@ a{
 .hidden{
 
     opacity: 0;
-    transition: all 1s;
+    transition: all 1s ease-in-out;
     transform: translateX(-100%);
 }
 
@@ -243,7 +247,7 @@ button{
     background-color: transparent;
     color: var(--text-color-dark);
     font-family: monospace;
-    font-size: 0.8vw;
+    font-size: inherit;
 }
 body.light-mode button{
     color: var(--text-color-light);
