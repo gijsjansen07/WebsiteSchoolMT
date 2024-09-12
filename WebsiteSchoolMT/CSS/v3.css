@@ -73,7 +73,7 @@ header {
     align-items: center; /* Centers the content vertically */
 }
 
-.transparent-text-wrapper, #content{
+.transparent-text-wrapper, #content, .drtab{
     padding: 0px 10px;
     margin-left:4px;
     margin-right: 4px;
@@ -120,14 +120,14 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow on hover */
 }
 #content {
-    margin: 10px;
+    margin: 0px 10px;
 }
 
 /* Dropdown menu styling */
 .dropdown {
     position: relative;
     padding: 0px 10px;
-    margin: 0px 10px;
+    margin: 0px 0px;
     display: inline-block;
     border-radius: 10px;
     
@@ -172,7 +172,17 @@ header {
     opacity: 0; /* Initially hidden */
     animation: slide-down 0.3s ease-in-out forwards;
 }
-
+.drtab:hover{
+    
+    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+}
+.dropdown:hover .drtab{
+    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+}
 /* Staggered animation for each dropdown item */
 .dropdown:hover .dropdown-content div:nth-child(1) {
     animation-delay: 0.0s;
