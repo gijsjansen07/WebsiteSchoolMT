@@ -13,7 +13,7 @@
     margin: 0px; /* Removes default margin from all elements */
     border: 0px; /* Removes any borders set by default */
     box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
-    
+    z-index: 1;
 }
 
 /*Colors:  #123f77	(18,63,119)
@@ -65,6 +65,8 @@ header {
     align-items: center; /* Centers items vertically */
     font-size: clamp(12px, 0.8vw, 20px);
     box-sizing: border-box;
+    z-index: 1;
+    position: fixed;
 }
 
 #tabh1, .transparent-text-wrapper, .Clock, content{
@@ -304,4 +306,16 @@ button{
 }
 body.light-mode button{
     color: var(--text-color-light);
+}
+
+
+.head{
+    background-image: "WebsiteSchoolMT/PICTURES/e6b18cc908f226c096f8775f59299e0c.jpg";
+    width: 80vw;
+    z-index: 0;
+    position: absolute;
+
+    background-color: #000000;
+    box-shadow: 10px 10px 10px 10px #000000;
+
 }
