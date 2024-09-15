@@ -51,14 +51,14 @@ body.light-mode {
     background-color: #1f1d1e00; /* Sets a transparent background color (probably intended as #1f1d1e with opacity) */
     padding: 0px; /* Removes padding */
     margin: 0px; /* Removes margin */
-    width: 80vw; /* Ensures the wrapper is as wide as the viewport */
+    width: 100vw; /* Ensures the wrapper is as wide as the viewport */
     height: 10000px; /* Sets a very large height for the wrapper */
     overflow-x: hidden; /* Prevents horizontal scrolling within the wrapper */
 }
 
 header {
-    width: 75vw;
-    margin: 0 auto;
+    width: 90vw;
+    margin: auto 5vw;
     padding: 10px;
     display: flex;
     justify-content: space-between; /* Centers items horizontally */
@@ -308,14 +308,3 @@ body.light-mode button{
     color: var(--text-color-light);
 }
 
-
-.head{
-    background-image: "WebsiteSchoolMT/PICTURES/e6b18cc908f226c096f8775f59299e0c.jpg";
-    width: 80vw;
-    z-index: 0;
-    position: absolute;
-
-    background-color: #000000;
-    box-shadow: 10px 10px 10px 10px #000000;
-
-}
