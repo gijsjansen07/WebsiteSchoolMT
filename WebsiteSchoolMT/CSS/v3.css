@@ -14,6 +14,7 @@
     border: 0px; /* Removes any borders set by default */
     box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
     z-index: 1;
+    position: relative;
 }
 
 /*Colors:  #123f77	(18,63,119)
@@ -56,17 +57,27 @@ body.light-mode {
     overflow-x: hidden; /* Prevents horizontal scrolling within the wrapper */
 }
 
+.main{
+    z-index: 5;
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 header {
     width: 90vw;
-    margin: auto 5vw;
+    margin: 0 5vw;
     padding: 10px;
     display: flex;
     justify-content: space-between; /* Centers items horizontally */
     align-items: center; /* Centers items vertically */
     font-size: clamp(12px, 0.8vw, 20px);
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 100;
     position: fixed;
+
 }
 
 #tabh1, .transparent-text-wrapper, .Clock, content{
@@ -83,8 +94,12 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background-color: rgba(55,202,229, 0);
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out /* Smooth transition */
+    background-color: rgba(64, 64, 64, 0.8);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    color:rgb(255, 255, 255);
+}
+#content{
+    background-color: #00000000;
 }
 .transparent-text-wrapper.active {
     background-color: rgba(18,63,119); /* Highlight color when active */
@@ -134,7 +149,6 @@ header {
     border-radius: 10px;
     
 
-    background-color: rgba(15,134,182, 0); /* Sets a fully transparent background */
 }
 
 
@@ -308,3 +322,36 @@ body.light-mode button{
     color: var(--text-color-light);
 }
 
+img.head{
+    width: 100vw;
+    z-index: 0;
+    position: absolute;
+    opacity: 50%;
+    translate: -50%;
+}
+
+.pagetitle{
+    border-radius: 10px;
+    border: #000000 1px;
+    margin:15vw;
+    margin-bottom: 20vw;
+    padding: 0px;
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 20vw;
+}
+
+h2{
+    padding: 10px;
+    font-size: 5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    width: auto;
+
+}
