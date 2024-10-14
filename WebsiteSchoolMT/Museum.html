@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Vincent van Gogh/Home</title>
-    <link rel="stylesheet" type="text/css" href="/WebsiteSchoolMT/CSS/v3.css">
+    <title>Vincent van Gogh/Museum</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/v3.css">
 
     <meta name="author" content="Gijs Jansen">
     <meta charset="UTF-8">
@@ -11,41 +11,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script defer src="/WebsiteSchoolMT/JS/DigitalClock.js" ></script>
-    <script defer src="/WebsiteSchoolMT/JS/load.js"></script>
-    <title>Vincent van Gogh/Home</title>
+    <script defer src="/JS/DigitalClock.js" ></script>
+    <script defer src="/JS/load.js"></script>
+    <script defer src="/JS/Sliders.js"></script>
+    <title>Vincent van Gogh/Museum</title>
 </head>
 <body>
-    
+
     <div id="wrapper">
+        
         <header >
 
-            <div class="dropdown">
+            <div class="dropdown transparent-text-wrapper">
                 
-                <div class="drtab"><h1 id="tabh1" >|||</h1></div>   
+                <div ><h1 id="tabh1" >|||</h1></div>   
                 <div class="dropdown-content">   
-                    <button id="theme-toggle" class="theme-toggle">
-                        <div id="content">
-                            <h1 id="tabh1" class="DLSwitch" >Dark/Light</h1>
-                        </div>
-                    </button>
+                
                     
-                    <a href="/WebsiteSchoolMT/Thuis.html">
+                    <a href="/Thuis.html">
                         <div id="content">
                             <h1 id="tabh1">Thuis</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Leven.html">
+                    <a href="Leven.html">
                         <div id="content" >
                             <h1 id="tabh1">Leven</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Kunstwerken.html">
+                    <a href="Kunstwerken.html">
                         <div id="content" >
                             <h1 id="tabh1">Kunstwerken</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Museum.html">
+                    <a href="Museum.html">
                         <div id="content" >
                             <h1 id="tabh1">Museum</h1>
                         </div>
@@ -53,10 +51,9 @@
                 </div>
             </div>            
 
-
            
-            <a href="Thuis.html" id="link">
-                <div class="transparent-text-wrapper ">
+            <a href="Thuis.html" id="">
+                <div class="transparent-text-wrapper">
                     
                         <h1 id="tabh1">Thuis</h1 >
                     
@@ -72,13 +69,14 @@
                         <h1 id="tabh1">Kunstwerken</h1 >
                 </div>
             </a>
-            <a href="Museum.html">
+            <a href="Museum.html" >
                 <div class="transparent-text-wrapper active">
                     
                         <h1 id="tabh1">Museum</h1 >
                     
                 </div>
             </a>
+
             <button id="theme-toggle" class="theme-toggle">
                 <div class="transparent-text-wrapper">
                     <h1 id="tabh1Clock">
@@ -86,40 +84,145 @@
                     </h1>
                 </div>
             </button>
+            
         </header>
-        <div class="samerow">
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
+        <div class="main">
+            <div class="headimg"><img src="/PICTURES/vangoghmuseum.jpg" alt="Starry night : Vincent van  Gogh" class="head"></div>
+            <div class="pagetitle">
+                <h2>Van Gogh Museum</h2>
+                
+                <p> Op deze pagina vindt je meer informatie over het van Gogh museum, zoals de openingstijden en de locatie.</p>
             </div>
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
+            <div class="background">
+                <div id="pesos">
+                    <table>
+                        <tr>
+                            <td width="30%">
+                                <div id="animation-container" class="hidden from-left">
+                                    <div class="subkop"><h3>Het Museum</h3></div>
+                                    <p class="generaltext">Het Van Gogh Museum in Amsterdam is een unieke culturele bestemming die gewijd is aan het leven en werk van de beroemde Nederlandse kunstenaar Vincent van Gogh. 
+                                        Het museum herbergt 's werelds grootste collectie van zijn schilderijen, tekeningen en brieven.<br/> 
+                                        
+                                        Of je nu een kunstliefhebber bent of gewoon geïnteresseerd in de fascinerende persoon die Vincent van Gogh was, een bezoek aan het Van Gogh Museum is een inspirerende en onvergetelijke ervaring.<br/>
+                                        </p>
+                                </div>
+                            </td>
+                            <td width="40%">
+                                <div id="Tabel">
+                                    <div id="controls-and-table">
+                    
+                    
+                                        <table id="productTable">
+                                            <div class="subkop">
+                                                <h3>Openingstijden</h3>
+                                            </div>
+                                        <tbody>
+                                            <tr>
+                                                <td class="">Maandag</td>
+                                                <td class="text-right">
+                                                    <div>9:00 – 18:00 </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">Dinsdag</td>
+                                                <td class="text-right">
+                                                    <div>9:00 – 18:00 </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">Woensdag</td>
+                                                <td class="text-right">
+                                                    <div>9:00 – 18:00 </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-strong">Donderdag</td>
+                                                <td class="text-right text-strong">
+                                                    <div>9:00 – 18:00 </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">Vrijdag</td>
+                                                <td class="text-right">
+                                                    <div>9:00 – 18:00 </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">Zaterdag</td>
+                                                <td class="text-right">
+                                                    <div>9:00 – 18:00 </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">Zondag</td>
+                                                <td class="text-right">
+                                                    <div>9:00 – 18:00 </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">
+                                                verplichte afbeeldingen
+                                                </td>
+                                                <td class="">
+                                                    <img src="/PICTURES/pngtree-native-chicken-commercially-available-element-material-png-image_4255613.png" alt="Chicken" height="40px"> 
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                            
+                            
+                                        <div>
+                                            <button id="toggleBordersButton" class="transparent-text-wrapper">
+                                                <h1 id="tabh1">Toggle Borders</h1>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+            <div id="pesos">
+                
+                <div style="translate:0px 10%;">
+                    <img style="border-radius: 10px;" width="100%" src="/PICTURES/the-potato-eaters-by-vincent-van-gogh-amsterdam-van-gogh-news-photo-1686112674.avif" alt="Aardappel eters">
+                </div>
+                <div id="animation-container" class=" from-left">
+                    <div  class="ggs">
+                        <h3 class="subkop">
+                            Groot aanbod
+                        </h3>
+                        <p class="generaltext">
+                            Met meer dan 200 schilderijen en 500 tekeningen biedt het Van Gogh Museum een chronologisch overzicht van zijn werk, van vroege schilderijen zoals De Aardappeleters tot zijn iconische meesterwerken zoals Zonnebloemen en De Slaapkamer. Het museum toont ook werken van tijdgenoten van Van Gogh, zoals Paul Gauguin, Claude Monet en Georges Seurat, waardoor bezoekers een bredere context van de kunstwereld van de 19e eeuw krijgen.
+                        </p>
 
-
+                    </div>
+                </div>
             </div>
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
+            <div class="pesos">
+                <div class="gmaps background ">
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4873.361454865637!2d4.878630376404619!3d52.35807567201926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609ef96d35a5f%3A0xc22828aef97cc51a!2sVan%20Gogh%20Museum!5e0!3m2!1snl!2snl!4v1728387551042!5m2!1snl!2snl" width="100%" height="85%" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="bottom">
+                <div class="">
+                    <p class="smalltext"> Email: <a href="mailto:gijs.jansen@maurickcollege.nl">VanGoghMuseum@email.com</a>
+                    </p>
+                </div>
+                <div class="">
+                    <p class="smalltext">Telefoon nr: <a href="">+__ __________</a></p>
+                </div>
+                <div class="">
+                    <img height="80px" src="/PICTURES/logo.svg" alt="Logo">
+                </div>
+            </div>
         </div>
     </div>
+    
 
 </body>
-</html>
+</html

@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <title>Vincent van Gogh/Home</title>
-    <link rel="stylesheet" type="text/css" href="/WebsiteSchoolMT/CSS/v3.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/v3.css">
 
     <meta name="author" content="Gijs Jansen">
     <meta charset="UTF-8">
@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script defer src="/WebsiteSchoolMT/JS/DigitalClock.js" ></script>
-    <script defer src="/WebsiteSchoolMT/JS/load.js"></script>
+    <script defer src="/JS/DigitalClock.js" ></script>
+    <script defer src="/JS/load.js"></script>
+    <script defer src="/JS/Sliders.js"></script>
     <title>Vincent van Gogh/Home</title>
 </head>
 <body>
@@ -31,22 +32,22 @@
                         </div>
                     </button>
                     
-                    <a href="/WebsiteSchoolMT/Thuis.html">
+                    <a href="/Thuis.html">
                         <div id="content">
                             <h1 id="tabh1">Thuis</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Leven.html">
+                    <a href="/Leven.html">
                         <div id="content" >
                             <h1 id="tabh1">Leven</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Kunstwerken.html">
+                    <a href="/Kunstwerken.html">
                         <div id="content" >
                             <h1 id="tabh1">Kunstwerken</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Museum.html">
+                    <a href="/Museum.html">
                         <div id="content" >
                             <h1 id="tabh1">Museum</h1>
                         </div>
@@ -89,44 +90,36 @@
             </button>
         </header>
         <div class="main">
-            <div class="headimg"><img src="/WebsiteSchoolMT/PICTURES/starrynight.jpeg" alt="Starry night : Vincent van  Gogh" class="head"></div>
+            <div class="headimg"><img src="/PICTURES/starrynight.jpeg" alt="Starry night : Vincent van  Gogh" class="head"></div>
             <div class="pagetitle">
                 <h2>Vincent van Gogh</h2>
                 
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aut deserunt dolor esse quidem totam aliquam explicabo aspernatur! Dolorum praesentium corporis earum aliquam quam temporibus consequuntur doloribus, ex sunt at.</p>
+                <p> Welkom op mijn website over Vincent van Gogh. Ontdek het leven en werk van deze invloedrijke schilder, bekend om zijn expressieve stijl en levendige kleuren. Laat je inspireren door zijn meesterwerken en de passie die zijn kunst kenmerkt.</p>
             </div>
+            <div class="background">
+                <div id="pesos">
+                    <div id="animation-container" class="hidden">
+                        <div id="" class="ggs">
+                            <h3 class="subkop">
+                                Een korte introductie
+                            </h3>
+                            <p class="generaltext">
+                                Vincent van Gogh (1853-1890) was een invloedrijke Nederlandse schilder, bekend om zijn emotionele diepgang en gedurfde kleurgebruik. Hij produceerde in slechts tien jaar tijd meer dan 2.000 kunstwerken, waaronder iconische schilderijen zoals *Zonnebloemen*, *De Slaapkamer* en *De Sterrennacht*. Hoewel hij tijdens zijn leven nauwelijks erkenning kreeg en worstelde met mentale gezondheidsproblemen, wordt zijn werk tegenwoordig gezien als baanbrekend voor de moderne kunst. Van Gogh's intense, expressieve stijl en gebruik van kleur hebben een blijvende invloed gehad op generaties kunstenaars en kunstliefhebbers over de hele wereld.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <img style="border-radius: 10px;" src="/PICTURES/VanGogh_1887_Selbstbildnis.jpg" alt="Zelf portret van Gogh">
+                    </div>
+                </div>
+            </div>
+            <div id="animation-container">
+                  <h3 class="subkop">Hue Color Slider</h3>
+                  <input type="range" id="hue-slider" min="0" max="360" value="0">
+                  <div id="color-box"></div>
+                  <p id="hue-value" class="generaltext">Hue: 0°</p>
+                
             
-            <div class="samerow">
-                <div id="animation-container" class="hidden">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-                </div>
-                <div id="animation-container" class="hidden">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-                </div>
-            </div>
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-            </div>
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-            </div>
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-            </div>
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
             </div>
         </div>
     </div>

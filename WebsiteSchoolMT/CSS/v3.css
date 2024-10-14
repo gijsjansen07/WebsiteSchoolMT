@@ -1,9 +1,10 @@
 /* General Reset */
 :root {
+    --custom-background-color: hsl(320, 3%, 12%);
     --background-color-dark: #1f1d1e;
     --text-color-dark: white;
 
-    --background-color-light: #ffffff;
+    --background-color-light: hsl(0, 0%, 100%);
     --text-color-light: #000000;
 }
 
@@ -15,6 +16,7 @@
     box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
     z-index: 1;
     position: relative;
+    font-family: Gotham Rounded SSm,Arial,sans-serif;
 }
 
 /*Colors:  #123f77	(18,63,119)
@@ -79,6 +81,10 @@ header {
     position: fixed;
 
 }
+/* subkop*/
+h3{
+    font-size: 2em;
+}
 
 #tabh1, .transparent-text-wrapper, .Clock, content{
     display: flex; /* Makes each item a flex container */
@@ -140,6 +146,13 @@ header {
     margin: 0px 10px;
 }
 
+.subkop{
+    margin: 5px 0px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
 /* Dropdown menu styling */
 .dropdown {
     position: relative;
@@ -275,32 +288,14 @@ a{
 /* animation-container(js in load*/
 
 #animation-container{
-
-    background-color: rgba(127, 127, 127, 0);
-    border:2px solid rgb(245,219,55);
+    border:2px solid rgb(245,219,55,0);
     border-radius: 10px;
-    margin-top: 10%;
-
     padding: 20px;
-    width: 400px;
-    display: flex;
-
-    place-items: center;
     text-align: left;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 
-.hidden{
-
-    opacity: 0;
-    transition: all 1s ease-in-out;
-    transform: translateX(-100%);
-}
-
-.show{
-    transform: translateX(0%);
-    opacity: 1;
-}
 
 a{
     color: var(--text-color-dark);
@@ -317,7 +312,10 @@ button{
     color: var(--text-color-dark);
     font-family: monospace;
     font-size: inherit;
-}
+}/* Add this to your CSS to apply to all buttons */
+/* Add this to your CSS to apply to all buttons */
+
+
 body.light-mode button{
     color: var(--text-color-light);
 }
@@ -359,11 +357,10 @@ body.light-mode .headimg::before{
 
 .pagetitle{
     
-    border-radius: 10px;
-    border: #000000 46px;
-    margin: 8vw;
+    margin: 8vw 8vw 12vw;
+
     padding: 0px;
-    /* width: 40%; */
+    
     display: flex;
     flex-direction: row;
     border-radius: 10px;
@@ -382,4 +379,141 @@ p{
     width: auto;
     font-size: 2em;
 
+}
+
+#hue-slider {
+    width: 300px;
+    margin: 20px;
+  }
+  
+  #color-box {
+    width: 150px;
+    height: 150px;
+    background-color: hsl(0, 100%, 50%);
+    margin: 20px auto;
+    border: 2px solid #000000;
+    border-radius: 10px;
+  }
+  
+  #hue-value {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+
+/*Googlelmaps embed*/
+.gmaps{
+    height:60vh;
+    flex-direction: column;
+}
+
+table{
+    
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    width: auto;
+    
+}
+#productTable, #productTable td {
+    transition: outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: 300px;
+}
+
+/* When borders are hidden */
+#productTable.no-borders td {
+    outline: rgb(0, 0, 0,0); /* Remove the outline when borders are hidden */
+}
+
+/* When borders are visible */
+#productTable td {
+    background-color: transparent; /* No background color when borders are shown */
+    outline: 2px solid rgba(0, 0, 0, 0.50); /* Uniform black border for cells */
+}
+
+
+#Tabel{
+    margin: 0vw 0vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+tbody, tfoot, thead {
+    background-color: rgba(124, 123, 123, 0);
+    border: none;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+tbody td, tbody th, tfoot td, tfoot th, thead td, thead th {
+    padding: .4705882353rem .5882352941rem .5882352941rem;
+    
+}
+
+.text-right {
+    text-align: right;
+}
+tbody tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 0;
+
+}
+
+#toggleBordersButton button {
+    background-color: rgba(64, 64, 64, 0.8); /* Matches the background */
+    color: white; /* Text color */
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#toggleBorderButton button:hover {
+    background-color: rgba(15, 134, 182, 1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#pesos{
+    width: 80vw;
+    margin: 4vh 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.generaltext{
+    font-size: 1.4em;
+}
+
+.ggs{
+    width: 40vw;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.background{
+    margin: 10vh 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center
+    ;
+    
+    background-color: rgb(0, 0, 0,0.2);
+}
+.smalltext{
+    font-size: 0.8em;
+}
+.bottom{
+    width: 90vw;
+    margin: 0 5vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
 }
