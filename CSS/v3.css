@@ -1,0 +1,521 @@
+/* General Reset */
+:root {
+    --custom-background-color: hsl(320, 3%, 12%);
+    --background-color-dark: #1f1d1e;
+    --text-color-dark: white;
+
+    --background-color-light: hsl(0, 0%, 100%);
+    --text-color-light: #000000;
+}
+
+
+* {
+    padding: 0px; /* Removes default padding from all elements */
+    margin: 0px; /* Removes default margin from all elements */
+    border: 0px; /* Removes any borders set by default */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+    z-index: 1;
+    position: relative;
+    font-family: Gotham Rounded SSm,Arial,sans-serif;
+}
+
+/*Colors:  #123f77	(18,63,119)
+#0f86b6	(15,134,182)
+#37cae5	(55,202,229)
+#f5db37	(245,219,55)
+#fbefcb	(251,239,203)*/ 
+
+
+html, body {
+    height: 100%; /* Sets the height of both html and body to fill the viewport */
+    margin: 0px; /* Removes default margin */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    width: 100vw; /* Sets the body's width to 100% of the viewport width */
+    height: auto; /* Allows the height to adjust based on content */
+    min-height: 100%; /* Ensures the body's height is at least the height of the viewport */
+    display: flex;
+    justify-content: center;
+    
+    
+}
+body.light-mode {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+
+#wrapper {
+    background-position: center; /* Centers the background content */
+    background-color: #1f1d1e00; /* Sets a transparent background color (probably intended as #1f1d1e with opacity) */
+    padding: 0px; /* Removes padding */
+    margin: 0px; /* Removes margin */
+    width: 100vw; /* Ensures the wrapper is as wide as the viewport */
+    height: 100vh; /* Sets a very large height for the wrapper */
+    overflow-x: hidden; /* Prevents horizontal scrolling within the wrapper */
+}
+
+.main{
+    z-index: 5;
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: normal;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    width: 90vw;
+    margin: 0 5vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    font-size: clamp(12px, 1em, 20px);
+    box-sizing: border-box;
+    z-index: 100;
+    position: fixed;
+
+}
+/* subkop*/
+h3{
+    font-size: 2em;
+}
+
+#tabh1, .transparent-text-wrapper, .Clock, content{
+    display: flex; /* Makes each item a flex container */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+}
+
+.transparent-text-wrapper, #content, .drtab{
+    padding: 0px 10px;
+    margin-left:4px;
+    margin-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(64, 64, 64, 0.8);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    color:rgb(255, 255, 255);
+}
+#content{
+    background-color: #00000000;
+}
+.transparent-text-wrapper.active {
+    background-color: rgba(18,63,119); /* Highlight color when active */
+}
+
+/* Transparent tabs */
+#tabh1 {
+    opacity: 100%; /* Ensures the element is fully opaque */
+    font-family: monospace; /* Sets the font family */
+    text-align: center; /* Centers the text */
+    /* Sets the font size */
+    font-size: inherit;
+
+    padding: 8px; /* Adds padding inside the element */
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* Smooth text scaling on hover */
+}
+
+#tabh1Clock {
+    opacity: 100%; /* Ensures the element is fully opaque */
+    font-family: monospace; /* Sets the font family */
+    text-align: center; /* Centers the text */
+    font-size: inherit; /* Sets the font size */
+    padding: 8px 10px; /* Adds padding inside the element */
+    transition: transform 0.3s ease-in-out; /* Smooth text scaling on hover */
+}
+.transparent-text-wrapper:hover {
+    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+}
+#content:hover {
+    background-color: rgba(18,63,119) ;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow on hover */
+}
+#content {
+    margin: 0px 10px;
+}
+
+.subkop{
+    margin: 5px 0px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+/* Dropdown menu styling */
+.dropdown {
+    position: relative;
+    padding: 0px 10px;
+    margin: 0px 0px;
+    display: inline-block;
+    border-radius: 10px;
+    
+
+}
+
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    z-index: 1;
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    top: 100%;
+    background-color: rgb(15,134,182);
+    border-radius: 10px;
+    width: auto;
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Dropdown items */
+.dropdown-content div {
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    
+    opacity: 0; /* Initially hidden */
+    animation: slide-down 0.3s ease-in-out forwards;
+}
+.drtab:hover{
+    
+    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+}
+.dropdown:hover .drtab{
+    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+}
+/* Staggered animation for each dropdown item */
+.dropdown:hover .dropdown-content div:nth-child(1) {
+    animation-delay: 0.0s;
+}
+
+.dropdown:hover .dropdown-content div:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.dropdown:hover .dropdown-content div:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.dropdown:hover .dropdown-content div:nth-child(4) {
+    animation-delay: 0.15s;
+}
+.dropdown:hover .dropdown-content div:nth-child(5) {
+    animation-delay: 0.2s;
+}
+/* Slide-down animation */
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px); /* Start above */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; } 
+      to { opacity: 1; } 
+}
+/* Additional content styling */
+
+
+
+
+/*Clock elementen*/
+
+.Clock{
+    border: 1px brown;
+    border-radius: 10px;
+    width:fit-content;
+    font-family:  monospace;
+
+}
+
+#date{
+    font-size: inherit !important;
+    text-align: center;
+    font-family:  monospace;
+}
+
+.Clock ul{
+    box-sizing: content-box;
+    list-style: none;
+    display: flex;
+    font-size: inherit;
+    text-align: center;
+    font-family:  monospace;
+}
+
+a{
+    text-decoration: none;
+
+
+}
+/* animation-container(js in load*/
+
+#animation-container{
+    border:2px solid rgb(245,219,55,0);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+
+
+a{
+    color: var(--text-color-dark);
+}
+
+body.light-mode a {
+    text-decoration: none;
+    color: var(--text-color-light)
+; /* Set this to the desired color for your links */
+}
+
+button{
+    background-color: transparent;
+    color: var(--text-color-dark);
+    font-family: monospace;
+    font-size: inherit;
+}/* Add this to your CSS to apply to all buttons */
+/* Add this to your CSS to apply to all buttons */
+
+
+body.light-mode button{
+    color: var(--text-color-light);
+}
+
+img.head{
+    width: 100vw;
+    z-index: 0;
+    opacity: 90%;
+    position: absolute;
+}
+.headimg {
+    position: absolute;
+    display: inline-block; /* Adjust based on your layout needs */
+}
+
+.headimg img {
+    
+    height: auto; /* Adjust as necessary */
+    display: block; /* Removes unwanted space at the bottom */
+    position: relative;
+    z-index: 0; /* Ensure the image is beneath the gradient */
+}
+
+.headimg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgb(31, 29, 30,0), var(--background-color-dark)); /* Gradient overlay */
+    z-index: 1; /* Ensure the gradient appears over the image */
+}
+
+body.light-mode .headimg::before{
+    
+    background: linear-gradient(to bottom, rgb(31, 29, 30,0), var(--background-color-light));
+}
+
+.pagetitle{
+    
+    height: 100vh;
+
+    margin: 0px 8vw 10vh;
+    
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+h2{
+    padding: 10px;
+    font-size: 8em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    width: auto;
+    font-size: 2em;
+
+}
+
+#hue-slider {
+    width: 300px;
+    margin: 20px;
+  }
+  
+  #color-box {
+    width: 150px;
+    height: 150px;
+    background-color: hsl(0, 100%, 50%);
+    margin: 20px auto;
+    border: 2px solid #000000;
+    border-radius: 10px;
+  }
+  
+  #hue-value {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+
+/*Googlelmaps embed*/
+.gmaps{
+    height:60vh;
+    flex-direction: column;
+}
+
+table{
+    
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    width: auto;
+    
+}
+#productTable, #productTable td {
+    transition: outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: 300px;
+}
+
+/* When borders are hidden */
+#productTable.no-borders td {
+    outline: rgb(0, 0, 0,0); /* Remove the outline when borders are hidden */
+}
+
+/* When borders are visible */
+#productTable td {
+    background-color: transparent; /* No background color when borders are shown */
+    outline: 2px solid rgba(0, 0, 0, 0.50); /* Uniform black border for cells */
+}
+
+
+#Tabel{
+    margin: 0vw 0vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+tbody, tfoot, thead {
+    background-color: rgba(124, 123, 123, 0);
+    border: none;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+tbody td, tbody th, tfoot td, tfoot th, thead td, thead th {
+    padding: .4705882353rem .5882352941rem .5882352941rem;
+    
+}
+
+.text-right {
+    text-align: right;
+}
+tbody tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 0;
+
+}
+
+#toggleBordersButton button {
+    background-color: rgba(64, 64, 64, 0.8); /* Matches the background */
+    color: white; /* Text color */
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#toggleBorderButton button:hover {
+    background-color: rgba(15, 134, 182, 1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#pesos{
+    width: 80vw;
+    margin: 4vh 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.generaltext{
+    font-size: 1.4em;
+}
+
+.ggs{
+    width: 40vw;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.background{
+    margin: 10vh 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center
+    ;
+    
+    background-color: rgb(0, 0, 0,0.2);
+}
+.smalltext{
+    font-size: 0.8em;
+}
+.bottom{
+    border-top:2px black solid;
+    border-radius: 10px;
+    width: 90vw;
+    margin: 5vh 5vw 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
