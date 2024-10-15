@@ -519,3 +519,31 @@ tbody tr:nth-child(2n) {
     align-items: center;
     box-sizing: border-box;
 }
+iframe{
+    border-radius: 10px;
+}
+
+img{
+    border-radius: 10px;
+    will-change: transform;
+    transition: transform .4s cubic-bezier(.23,1,.32,1);
+}
+
+img:hover{
+    transform: scale(1.05);
+    
+}
+
+.img:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+.img, .img:after, .img img {
+    border-radius: 10px;
+    overflow: hidden;
+}

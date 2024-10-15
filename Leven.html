@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Vincent van Gogh/Home</title>
-    <link rel="stylesheet" type="text/css" href="/WebsiteSchoolMT/CSS/v3.css">
+    <title>Vincent van Gogh/Film</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/v3.css">
 
     <meta name="author" content="Gijs Jansen">
     <meta charset="UTF-8">
-    <meta name="Home" content="width=device-width, initial-scale=1.0">
+    <meta name="Film" content="width=device-width, initial-scale=1.0">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script defer src="/WebsiteSchoolMT/JS/DigitalClock.js" ></script>
-    <script defer src="/WebsiteSchoolMT/JS/load.js"></script>
-    <title>Vincent van Gogh/Home</title>
+    <script defer src="/JS/DigitalClock.js" ></script>
+    <script defer src="/JS/load.js"></script>
+    <script defer src="/JS/Sliders.js"></script>
+    
 </head>
 <body>
-    
+
     <div id="wrapper">
+        
         <header >
 
-           
-            <div class="dropdown">
+            <div class="dropdown transparent-text-wrapper">
                 
-                <div class="drtab"><h1 id="tabh1" >|||</h1></div>   
+                <div ><h1 id="tabh1" >|||</h1></div>   
                 <div class="dropdown-content">   
                     <button id="theme-toggle" class="theme-toggle">
                         <div id="content">
@@ -31,22 +32,22 @@
                         </div>
                     </button>
                     
-                    <a href="/WebsiteSchoolMT/Thuis.html">
+                    <a href="/Thuis.html">
                         <div id="content">
                             <h1 id="tabh1">Thuis</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Leven.html">
+                    <a href="/Leven.html">
                         <div id="content" >
-                            <h1 id="tabh1">Leven</h1>
+                            <h1 id="tabh1">Film</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Kunstwerken.html">
+                    <a href="/Kunstwerken.html">
                         <div id="content" >
                             <h1 id="tabh1">Kunstwerken</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Museum.html">
+                    <a href="/Museum.html">
                         <div id="content" >
                             <h1 id="tabh1">Museum</h1>
                         </div>
@@ -55,16 +56,16 @@
             </div>            
 
            
-            <a href="Thuis.html" id="link">
-                <div class="transparent-text-wrapper ">
+            <a href="Thuis.html" >
+                <div class="transparent-text-wrapper">
                     
                         <h1 id="tabh1">Thuis</h1 >
                     
                 </div>
             </a>
-            <a href="Leven.html ">
+            <a href="Leven.html" >
                 <div class="transparent-text-wrapper active">
-                        <h1 id="tabh1">Leven</h1 >
+                        <h1 id="tabh1">Film</h1 >
                 </div>
             </a>
             <a href="Kunstwerken.html">
@@ -79,6 +80,7 @@
                     
                 </div>
             </a>
+
             <button id="theme-toggle" class="theme-toggle">
                 <div class="transparent-text-wrapper">
                     <h1 id="tabh1Clock">
@@ -87,38 +89,47 @@
                 </div>
             </button>
         </header>
-        <div class="samerow">
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
+        <div class="main">
+            <div class="headimg"> <img src="/PICTURES/loving-vincent-1.jpg" alt="Shot from loving Vincent" class="head"></div>
+            <div class="pagetitle" style="flex-direction: column; justify-content: center;">
+                <h2>Loving Vincent</h2>
+                <p>De film over Vincent van Goghs leven in de stijl van Vincent van Gogh</p>
             </div>
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
+            <div class="background">
+                <div id="pesos">
+                    <div class="img">
+                        <img style="border-radius: 10px;" height="300px" src="/PICTURES/Loving-vincent-sailer.jpg" alt="Sailor from loving Vincent">
+                    </div>
+                    <div class="img">
+                        <img style="border-radius: 10px;" height="300px" src="/PICTURES/woman.jpg" alt="Woman">
+                    </div>
+                    <div id="animation-container">
+                        <div class="ggs">
+                            <h3 class="subkop"></h3>
+                            <p class="generaltext">Loving Vincent is een unieke animatiefilm uit 2017 die volledig bestaat uit met de hand geschilderde frames, geïnspireerd door de kunstwerken van Vincent van Gogh. De film vertelt het verhaal van de laatste dagen van Van Gogh's leven en onderzoekt de omstandigheden rond zijn mysterieuze dood. Door een combinatie van schilderachtige beelden en een meeslepend narratief brengt Loving Vincent niet alleen een eerbetoon aan de beroemde kunstenaar, maar dompelt het de kijker ook onder in de stijl en emotie van zijn werk. Het is een visueel verbluffende ode aan een van de grootste schilders aller tijden.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h3 class="subkop"> Trailer</h3>
+                <iframe  width="640" height="385" src="https://www.youtube.com/embed/5jo0FJDi0nc?si=XxVnNEI6pE3J4tjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe  width="320" height="193" src="https://www.youtube.com/embed/5jo0FJDi0nc?si=XxVnNEI6pE3J4tjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+            <div class="bottom">
+                <div class="">
+                    <p class="smalltext"> Email: <a href="mailto:gijs.jansen@maurickcollege.nl">VanGoghMuseum@email.com</a>
+                    </p>
+                </div>
+                <div class="">
+                    <p class="smalltext">Telefoon nr: <a href="">+__ __________</a></p>
+                </div>
+                <div class="img">
+                    <img height="80px" src="/PICTURES/logo.svg" alt="Logo">
+                </div>
         </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
 
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
     </div>
 
 </body>
