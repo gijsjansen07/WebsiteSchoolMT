@@ -12,17 +12,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script defer src="/JS/DigitalClock.js" ></script>
-    <script defer src="/WebsiteSchoolMT/JS/load.js"></script>
+    <script defer src="/JS/load.js"></script>
+    <script defer src="/JS/Sliders.js"></script>
     <title>Vincent van Gogh/Home</title>
 </head>
 <body>
-    
+
     <div id="wrapper">
+        
         <header >
 
-            <div class="dropdown">
+            <div class="dropdown transparent-text-wrapper">
                 
-                <div class="drtab"><h1 id="tabh1" >|||</h1></div>   
+                <div ><h1 id="tabh1" >|||</h1></div>   
                 <div class="dropdown-content">   
                     <button id="theme-toggle" class="theme-toggle">
                         <div id="content">
@@ -30,33 +32,32 @@
                         </div>
                     </button>
                     
-                    <a href="/WebsiteSchoolMT/Thuis.html">
+                    <a href="/Thuis.html">
                         <div id="content">
                             <h1 id="tabh1">Thuis</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Leven.html">
+                    <a href="/Leven.html">
                         <div id="content" >
-                            <h1 id="tabh1">Leven</h1>
+                            <h1 id="tabh1">Film</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Kunstwerken.html">
+                    <a href="/Kunstwerken.html">
                         <div id="content" >
                             <h1 id="tabh1">Kunstwerken</h1>
                         </div>
                     </a>
-                    <a href="/WebsiteSchoolMT/Museum.html">
+                    <a href="/Museum.html">
                         <div id="content" >
                             <h1 id="tabh1">Museum</h1>
                         </div>
                     </a>
                 </div>
             </div>            
-   
 
            
             <a href="Thuis.html" id="link">
-                <div class="transparent-text-wrapper ">
+                <div class="transparent-text-wrapper active">
                     
                         <h1 id="tabh1">Thuis</h1 >
                     
@@ -64,19 +65,22 @@
             </a>
             <a href="Leven.html">
                 <div class="transparent-text-wrapper ">
-                        <h1 id="tabh1">Leven</h1 >
+                        <h1 id="tabh1">Film</h1 >
                 </div>
             </a>
             <a href="Kunstwerken.html">
-                <div class="transparent-text-wrapper active">
+                <div class="transparent-text-wrapper">
                         <h1 id="tabh1">Kunstwerken</h1 >
                 </div>
             </a>
             <a href="Museum.html">
                 <div class="transparent-text-wrapper">
+                    
                         <h1 id="tabh1">Museum</h1 >
+                    
                 </div>
             </a>
+
             <button id="theme-toggle" class="theme-toggle">
                 <div class="transparent-text-wrapper">
                     <h1 id="tabh1Clock">
@@ -85,38 +89,59 @@
                 </div>
             </button>
         </header>
-        <div class="samerow">
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
+        <div class="main">
+            <div class="headimg"><img src="" alt="" class="head"></div>
+            <div class="pagetitle">
+                <h2>Vincent van Gogh</h2>
+                
+                <p> Welkom op mijn website over Vincent van Gogh. Ontdek het leven en werk van deze invloedrijke schilder, bekend om zijn expressieve stijl en levendige kleuren. Laat je inspireren door zijn meesterwerken en de passie die zijn kunst kenmerkt.</p>
             </div>
-            <div id="animation-container" class="hidden">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
 
-
+            
+            <div id="pesos">
+               <div id="image-container">
+                    <img id="image" src="https://via.placeholder.com/300" alt="Image">
+                    <div class="slider-container">
+                        <label for="width-slider">Breedte:</label>
+                        <input width="500px" type="range" id="width-slider" min="50" max="500" value="200" step="10">
+                    </div>
+                    <div class="slider-container">
+                        <label for="height-slider">Hoogte:</label>
+                        <input width="500px" type="range" id="height-slider" min="50" max="500" value="200" step="10">
+                    </div>
+                </div>
             </div>
+            <!-- JavaScript voor de Slidiesss -->
+            <script>
+                var image = document.getElementById("image");
+                var widthSlider = document.getElementById("width-slider");
+                var heightSlider = document.getElementById("height-slider");
+                
+                widthSlider.addEventListener("input", function() {
+                
+                    image.style.width = this.value + "px";
+                });
+            
+                heightSlider.addEventListener("input", function() {
+                    image.style.height = this.value + "px";
+                });
+
+            </script>
+            
+
+            <div class="bottom">
+                <div class="">
+                    <p class="smalltext"> Email: <a href="mailto:gijs.jansen@maurickcollege.nl">VanGoghMuseum@email.com</a>
+                    </p>
+                </div>
+                <div class="">
+                    <p class="smalltext">Telefoon nr: <a href="">+__ __________</a></p>
+                </div>
+                <div class="img">
+                    <img height="80px" src="/PICTURES/logo.svg" alt="Logo">
+                </div>
         </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
 
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
-        <div id="animation-container" class="hidden">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam iusto error tempore minima dignissimos ad libero accusamus debitis ducimus, pariatur officiis saepe ratione neque cumque repellat earum dolore fugiat!</p>
-
-
-        </div>
     </div>
 
 </body>

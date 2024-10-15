@@ -113,3 +113,7 @@ toggleBordersButton.addEventListener('click', function() {
   }
   bordersVisible = !bordersVisible; // Toggle the state
 });
+
+
+
+

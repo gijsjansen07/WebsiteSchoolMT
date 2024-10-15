@@ -530,8 +530,8 @@ img{
 }
 
 img:hover{
-    transform: scale(1.05);
-    
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
 
 .img:after{
@@ -546,4 +546,35 @@ img:hover{
 .img, .img:after, .img img {
     border-radius: 10px;
     overflow: hidden;
+}
+
+
+
+            
+#image-container img {
+    width: 300px; 
+    height: 300px; 
+}
+#image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 650px;
+}
+.slider-container {
+    margin: 15px;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.slider {
+    width: 300px;
+}
+
+#width-slider, #height-slider{
+    width: 500px;
 }
