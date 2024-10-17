@@ -1,4 +1,4 @@
-/* General Reset */
+
 :root {
     --custom-background-color: hsl(320, 3%, 12%);
     --background-color-dark: #1f1d1e;
@@ -8,7 +8,6 @@
     --text-color-light: #000000;
 }
 
-
 * {
     padding: 0px; /* Removes default padding from all elements */
     margin: 0px; /* Removes default margin from all elements */
@@ -17,18 +16,16 @@
     z-index: 1;
     position: relative;
     font-family: Gotham Rounded SSm,Arial,sans-serif;
+    
 }
-
 /*Colors:  #123f77	(18,63,119)
 #0f86b6	(15,134,182)
 #37cae5	(55,202,229)
 #f5db37	(245,219,55)
 #fbefcb	(251,239,203)*/ 
 
-
 html, body {
     height: 100%; /* Sets the height of both html and body to fill the viewport */
-    margin: 0px; /* Removes default margin */
     overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
@@ -40,22 +37,16 @@ body {
     min-height: 100%; /* Ensures the body's height is at least the height of the viewport */
     display: flex;
     justify-content: center;
-    
-    
 }
 body.light-mode {
     background-color: var(--background-color-light);
     color: var(--text-color-light);
 }
 
-
 #wrapper {
     background-position: center; /* Centers the background content */
     background-color: #1f1d1e00; /* Sets a transparent background color (probably intended as #1f1d1e with opacity) */
-    padding: 0px; /* Removes padding */
-    margin: 0px; /* Removes margin */
     width: 100vw; /* Ensures the wrapper is as wide as the viewport */
-    height: 100vh; /* Sets a very large height for the wrapper */
     overflow-x: hidden; /* Prevents horizontal scrolling within the wrapper */
 }
 
@@ -68,6 +59,7 @@ body.light-mode {
     flex-direction: column;
     align-items: center;
 }
+
 header {
     width: 90vw;
     margin: 0 5vw;
@@ -79,17 +71,23 @@ header {
     box-sizing: border-box;
     z-index: 100;
     position: fixed;
-
 }
+
 /* subkop*/
-h3{
+h3.subkop {
     font-size: 2em;
+    margin: 5px 0px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    text-align: left;
 }
 
-#tabh1, .transparent-text-wrapper, .Clock, content{
+#tabh1, .transparent-text-wrapper, .Clock, #content{
     display: flex; /* Makes each item a flex container */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .transparent-text-wrapper, #content, .drtab{
@@ -106,8 +104,10 @@ h3{
 }
 #content{
     background-color: #00000000;
+    height: 10vh;
+    width: clamp(250px, 20vw, 20vw);;
 }
-.transparent-text-wrapper.active {
+.active {
     background-color: rgba(18,63,119); /* Highlight color when active */
 }
 
@@ -146,13 +146,7 @@ h3{
     margin: 0px 10px;
 }
 
-.subkop{
-    margin: 5px 0px;
-    position: relative;
-    display: flex;
-    justify-content: left;
-    text-align: left;
-}
+
 /* Dropdown menu styling */
 .dropdown {
     position: relative;
@@ -160,36 +154,40 @@ h3{
     margin: 0px 0px;
     display: inline-block;
     border-radius: 10px;
-    
-
 }
-
 
 /* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    z-index: 1;
-    min-width: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+    top: -9px;
+    height: 100vh;
+}
+/* Hide the rest of the header when hovering on dropdown */
+.dropdown:hover + .link {
+    visibility: hidden;  /* Makes the rest of the header invisible */
+    opacity: 0;          /* Smooth transition to hide the header */
+    transition: opacity 0.3s ease-in-out; /* Optional transition for smooth effect */
+}
+
+/* Ensure that the dropdown stays visible */
+.dropdown:hover {
+    visibility: visible; 
+    opacity: 1;
 }
 
 /* Show the dropdown content on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
-    opacity: 1;
-    top: 100%;
+    display: grid;
+    align-content: space-evenly;
+    justify-items: center;
+    top: -9px;
+    height: 95vh;
+    left: -100%;
     background-color: rgb(15,134,182);
-    border-radius: 10px;
-    width: auto;
+    width: clamp(300px, 25vw, 25vw);
     -webkit-animation: fadeIn 0.3s ease-in-out;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: slide-down 0.8s cubic-bezier(.23,1,.32,1);
 }
 
 /* Dropdown items */
@@ -199,46 +197,36 @@ h3{
     white-space: nowrap;
     
     opacity: 0; /* Initially hidden */
-    animation: slide-down 0.3s ease-in-out forwards;
+    animation: slide-down 0.7s ease-in-out forwards;
 }
-.drtab:hover{
-    
-    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
-}
-.dropdown:hover .drtab{
-    background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
-}
+
 /* Staggered animation for each dropdown item */
 .dropdown:hover .dropdown-content div:nth-child(1) {
     animation-delay: 0.0s;
 }
 
 .dropdown:hover .dropdown-content div:nth-child(2) {
-    animation-delay: 0.05s;
-}
-
-.dropdown:hover .dropdown-content div:nth-child(3) {
     animation-delay: 0.1s;
 }
 
+.dropdown:hover .dropdown-content div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
 .dropdown:hover .dropdown-content div:nth-child(4) {
-    animation-delay: 0.15s;
+    animation-delay: 5s;
 }
 .dropdown:hover .dropdown-content div:nth-child(5) {
-    animation-delay: 0.2s;
+    animation-delay: 1s;
 }
 /* Slide-down animation */
 @keyframes slide-down {
     from {
-        transform: translateY(-20px); /* Start above */
+        transform: translateX(-100%); /* Start above */
         opacity: 0;
     }
     to {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -250,27 +238,18 @@ h3{
     from { opacity: 0; } 
       to { opacity: 1; } 
 }
-/* Additional content styling */
-
-
-
-
 /*Clock elementen*/
-
 .Clock{
     border: 1px brown;
     border-radius: 10px;
     width:fit-content;
     font-family:  monospace;
-
 }
-
 #date{
     font-size: inherit !important;
     text-align: center;
     font-family:  monospace;
 }
-
 .Clock ul{
     box-sizing: content-box;
     list-style: none;
@@ -279,11 +258,8 @@ h3{
     text-align: center;
     font-family:  monospace;
 }
-
 a{
     text-decoration: none;
-
-
 }
 /* animation-container(js in load*/
 
@@ -295,16 +271,12 @@ a{
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-
-
 a{
     color: var(--text-color-dark);
 }
-
-body.light-mode a {
+body.light-mode a,button {
     text-decoration: none;
-    color: var(--text-color-light)
-; /* Set this to the desired color for your links */
+    color: var(--text-color-light);
 }
 
 button{
@@ -312,14 +284,7 @@ button{
     color: var(--text-color-dark);
     font-family: monospace;
     font-size: inherit;
-}/* Add this to your CSS to apply to all buttons */
-/* Add this to your CSS to apply to all buttons */
-
-
-body.light-mode button{
-    color: var(--text-color-light);
 }
-
 img.head{
     width: 100vw;
     z-index: 0;
@@ -330,7 +295,6 @@ img.head{
     position: absolute;
     display: inline-block; /* Adjust based on your layout needs */
 }
-
 .headimg img {
     
     height: auto; /* Adjust as necessary */
@@ -346,27 +310,21 @@ img.head{
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgb(31, 29, 30,0), var(--background-color-dark)); /* Gradient overlay */
-    z-index: 1; /* Ensure the gradient appears over the image */
+    background: linear-gradient(to bottom, rgb(31, 29, 30,0) , var(--background-color-dark)); /* Gradient overlay */
+    z-index: 1;
 }
-
 body.light-mode .headimg::before{
-    
-    background: linear-gradient(to bottom, rgb(31, 29, 30,0), var(--background-color-light));
+    background: linear-gradient(to bottom, rgb(31, 29, 30,0) , var(--background-color-light));
 }
 
 .pagetitle{
-    
     height: 100vh;
-
     margin: 0px 8vw 10vh;
-    
     display: flex;
     flex-direction: row;
-    border-radius: 10px;
-    
     align-items: center;
     flex-wrap: nowrap;
+    border-radius: 10px;
 }
 
 h2{
@@ -378,35 +336,29 @@ h2{
 p{
     width: auto;
     font-size: 2em;
-
 }
 
 #hue-slider {
     width: 300px;
     margin: 20px;
   }
-  
-  #color-box {
+#color-box {
     width: 150px;
     height: 150px;
     background-color: hsl(0, 100%, 50%);
     margin: 20px auto;
     border: 2px solid #000000;
     border-radius: 10px;
-  }
-  
-  #hue-value {
+} 
+#hue-value {
     font-size: 1.2em;
     margin-top: 10px;
-  }
-
-
+}
 /*Googlelmaps embed*/
 .gmaps{
     height:60vh;
     flex-direction: column;
 }
-
 table{
     
     border-collapse: collapse;
@@ -418,26 +370,18 @@ table{
     transition: outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
     width: 300px;
 }
-
-/* When borders are hidden */
 #productTable.no-borders td {
     outline: rgb(0, 0, 0,0); /* Remove the outline when borders are hidden */
 }
-
-/* When borders are visible */
 #productTable td {
     background-color: transparent; /* No background color when borders are shown */
     outline: 2px solid rgba(0, 0, 0, 0.50); /* Uniform black border for cells */
 }
-
-
 #Tabel{
     margin: 0vw 0vw;
     display: flex;
     justify-content: flex-end;
 }
-
-
 tbody, tfoot, thead {
     background-color: rgba(124, 123, 123, 0);
     border: none;
@@ -448,19 +392,15 @@ tr {
     unicode-bidi: isolate;
     border-color: inherit;
 }
-
 tbody td, tbody th, tfoot td, tfoot th, thead td, thead th {
     padding: .4705882353rem .5882352941rem .5882352941rem;
-    
 }
-
 .text-right {
     text-align: right;
 }
 tbody tr:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.4);
     border-bottom: 0;
-
 }
 
 #toggleBordersButton button {
@@ -470,13 +410,11 @@ tbody tr:nth-child(2n) {
     border-radius: 10px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
 #toggleBorderButton button:hover {
     background-color: rgba(15, 134, 182, 1);
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 #pesos{
     width: 80vw;
     margin: 4vh 0px;
@@ -487,22 +425,17 @@ tbody tr:nth-child(2n) {
 .generaltext{
     font-size: 1.4em;
 }
-
 .ggs{
     width: 40vw;
-    
     display: flex;
     flex-direction: column;
     align-items: left;
 }
-
 .background{
     margin: 10vh 0px;
     width: 100vw;
     display: flex;
-    justify-content: center
-    ;
-    
+    justify-content: center;
     background-color: rgb(0, 0, 0,0.2);
 }
 .smalltext{
@@ -522,18 +455,15 @@ tbody tr:nth-child(2n) {
 iframe{
     border-radius: 10px;
 }
-
-img{
+img, #color-box{
     border-radius: 10px;
     will-change: transform;
-    transition: transform .4s cubic-bezier(.23,1,.32,1);
+    transition: all .4s cubic-bezier(.23,1,.32,1);
 }
-
-img:hover{
+img:hover, #color-box:hover{
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
-
 .img:after{
     content: "";
     width: 100%;
@@ -541,40 +471,72 @@ img:hover{
     position: absolute;
     left: 0;
     top: 0;
-    
+}
+header img{
+    width: 90px;
+}
+header .img {
+    border: 0.1em black solid;
+    border-radius: 50%;
+    background: none;
+    width: fit-content;
+    height: 92px;
 }
 .img, .img:after, .img img {
     border-radius: 10px;
     overflow: hidden;
-}
-
-
-
-            
-#image-container img {
-    width: 300px; 
-    height: 300px; 
 }
 #image-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 650px;
+    height: fit-content;
+
+    img:hover{
+        transform: scale(1.02);
+       
+    }
+    #image{
+        width: 804px;
+        height: 400px;
+    }
 }
 .slider-container {
     margin: 15px;
 }
-
 .slider-container label {
     display: block;
     margin-bottom: 5px;
 }
-
 .slider {
     width: 300px;
 }
-
 #width-slider, #height-slider{
     width: 500px;
+}
+.grid{   
+    display: grid;
+    grid-template-columns: repeat( auto-fit , 300px) ;
+    gap: 40px;
+    justify-content: center;
+    margin: 20px;
+    .col{
+        background-color: rgba(126, 126, 126, 0.2);
+        padding: 25px;
+        border-radius: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+    }
+    img{
+        border-radius: 0%;
+        max-width: 250px;
+        max-height: 250px;
+    }
+    img:hover{
+        transform: scale(1.4);
+    }
 }

@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script defer src="/JS/DigitalClock.js" ></script>
     <script defer src="/JS/load.js"></script>
-    <script defer src="/JS/Sliders.js"></script>
-    <title>Vincent van Gogh/Home</title>
+    
+    <title>Vincent van Gogh/Kunstwerken</title>
 </head>
 <body>
 
@@ -26,13 +26,16 @@
                 
                 <div ><h1 id="tabh1" >|||</h1></div>   
                 <div class="dropdown-content">   
+                    <div class="img">
+                        <img src="/PICTURES/afbeelding.png" alt="emblem">
+                    </div>
                     <button id="theme-toggle" class="theme-toggle">
                         <div id="content">
                             <h1 id="tabh1" class="DLSwitch" >Dark/Light</h1>
                         </div>
                     </button>
                     
-                    <a href="/Thuis.html">
+                    <a href="/Thuis.html" >
                         <div id="content">
                             <h1 id="tabh1">Thuis</h1>
                         </div>
@@ -56,24 +59,24 @@
             </div>            
 
            
-            <a href="Thuis.html" id="link">
-                <div class="transparent-text-wrapper active">
+            <a href="Thuis.html" class="link">
+                <div class="transparent-text-wrapper">
                     
                         <h1 id="tabh1">Thuis</h1 >
                     
                 </div>
             </a>
-            <a href="Leven.html">
+            <a href="Leven.html" class="link">
                 <div class="transparent-text-wrapper ">
                         <h1 id="tabh1">Film</h1 >
                 </div>
             </a>
-            <a href="Kunstwerken.html">
-                <div class="transparent-text-wrapper">
+            <a href="Kunstwerken.html" class="link">
+                <div class="transparent-text-wrapper active">
                         <h1 id="tabh1">Kunstwerken</h1 >
                 </div>
             </a>
-            <a href="Museum.html">
+            <a href="Museum.html" class="link">
                 <div class="transparent-text-wrapper">
                     
                         <h1 id="tabh1">Museum</h1 >
@@ -81,7 +84,7 @@
                 </div>
             </a>
 
-            <button id="theme-toggle" class="theme-toggle">
+            <button id="theme-toggle" class="link theme-toggle">
                 <div class="transparent-text-wrapper">
                     <h1 id="tabh1Clock">
                         <div id="clock"></div>
@@ -90,27 +93,28 @@
             </button>
         </header>
         <div class="main">
-            <div class="headimg"><img src="" alt="" class="head"></div>
+            <div class="headimg"><img src="/PICTURES/VGWEB10.webp" alt="" class="head"></div>
             <div class="pagetitle">
-                <h2>Vincent van Gogh</h2>
-                
-                <p> Welkom op mijn website over Vincent van Gogh. Ontdek het leven en werk van deze invloedrijke schilder, bekend om zijn expressieve stijl en levendige kleuren. Laat je inspireren door zijn meesterwerken en de passie die zijn kunst kenmerkt.</p>
-            </div>
-
+                <h2>Kunstwerken</h2>
             
+            </div>
+            <div class="background">
             <div id="pesos">
-               <div id="image-container">
-                    <img id="image" src="https://via.placeholder.com/300" alt="Image">
+               <div id="image-container" >
                     <div class="slider-container">
                         <label for="width-slider">Breedte:</label>
-                        <input width="500px" type="range" id="width-slider" min="50" max="500" value="200" step="10">
+                        <input width="500px" type="range" id="width-slider" min="50" max="1000" value="804" step="10">
                     </div>
                     <div class="slider-container">
                         <label for="height-slider">Hoogte:</label>
-                        <input width="500px" type="range" id="height-slider" min="50" max="500" value="200" step="10">
+                        <input width="500px" type="range" id="height-slider" min="50" max="1000" value="400" step="10">
                     </div>
+                    
+                        <img id="image" src="/PICTURES/VGWEB11.webp" alt="Image" >
+                    
                 </div>
             </div>
+        </div>
             <!-- JavaScript voor de Slidiesss -->
             <script>
                 var image = document.getElementById("image");
@@ -128,7 +132,70 @@
 
             </script>
             
-
+            <div style="width: 100vw;">
+                <div class="grid">
+                    <div class="col">
+                        <img id="image" src="/PICTURES/the-potato-eaters-by-vincent-van-gogh-amsterdam-van-gogh-news-photo-1686112674.avif" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB1.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB2.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB3.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB4.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB5.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB6.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB7.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB8.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB9.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB12.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB13.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB14.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB15.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB16.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB18.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB19.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB20.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB21.webp" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img id="image" src="/PICTURES/VGWEB22.webp" alt="Image">
+                    </div>
+                </div>
+            </div>
             <div class="bottom">
                 <div class="">
                     <p class="smalltext"> Email: <a href="mailto:gijs.jansen@maurickcollege.nl">VanGoghMuseum@email.com</a>

@@ -1,5 +1,4 @@
 
-
 function updateTime() {
     var now = new Date();
     var hours = now.getHours();
