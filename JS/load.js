@@ -1,19 +1,3 @@
-//animated divs
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) =>{
-        cons;ole.log(entry)
-        if (entry.isIntersecting){
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.replace('show','hide');
-        }
-        
-    });
-});
-
-const animatedElements = document.querySelectorAll('.animated-divs');
-animatedElements.forEach((el) => observer.observe(el));
-
 
 // Dark/Light mode switch and slider color change
 

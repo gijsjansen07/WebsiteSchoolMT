@@ -16,7 +16,7 @@
     z-index: 1;
     position: relative;
     font-family: Gotham Rounded SSm,Arial,sans-serif;
-    
+    transition: all .4s cubic-bezier(.23,1,.32,1);
 }
 /*Colors:  #123f77	(18,63,119)
 #0f86b6	(15,134,182)
@@ -37,6 +37,7 @@ body {
     min-height: 100%; /* Ensures the body's height is at least the height of the viewport */
     display: flex;
     justify-content: center;
+    transition: all .4s cubic-bezier(.23,1,.32,1);
 }
 body.light-mode {
     background-color: var(--background-color-light);
@@ -99,7 +100,6 @@ h3.subkop {
     align-items: center;
     border-radius: 10px;
     background-color: rgba(64, 64, 64, 0.8);
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
     color:rgb(255, 255, 255);
 }
 #content{
@@ -121,7 +121,7 @@ h3.subkop {
 
     padding: 8px; /* Adds padding inside the element */
     font-weight: bold;
-    transition: transform 0.3s ease-in-out; /* Smooth text scaling on hover */
+    
 }
 
 #tabh1Clock {
@@ -130,16 +130,15 @@ h3.subkop {
     text-align: center; /* Centers the text */
     font-size: inherit; /* Sets the font size */
     padding: 8px 10px; /* Adds padding inside the element */
-    transition: transform 0.3s ease-in-out; /* Smooth text scaling on hover */
 }
 .transparent-text-wrapper:hover {
     background-color: rgba(15, 134, 182, 1); /* Darker background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
 }
 #content:hover {
     background-color: rgba(18,63,119) ;
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow on hover */
 }
 #content {
@@ -167,15 +166,12 @@ h3.subkop {
 .dropdown:hover + .link {
     visibility: hidden;  /* Makes the rest of the header invisible */
     opacity: 0;          /* Smooth transition to hide the header */
-    transition: opacity 0.3s ease-in-out; /* Optional transition for smooth effect */
 }
-
 /* Ensure that the dropdown stays visible */
 .dropdown:hover {
     visibility: visible; 
     opacity: 1;
 }
-
 /* Show the dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: grid;
@@ -261,15 +257,15 @@ h3.subkop {
 a{
     text-decoration: none;
 }
-/* animation-container(js in load*/
+
 
 #animation-container{
     border:2px solid rgb(245,219,55,0);
     border-radius: 10px;
     padding: 20px;
     text-align: left;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
+
 
 a{
     color: var(--text-color-dark);
@@ -367,7 +363,6 @@ table{
     
 }
 #productTable, #productTable td {
-    transition: outline 0.3s ease-in-out, background-color 0.3s ease-in-out;
     width: 300px;
 }
 #productTable.no-borders td {
@@ -408,11 +403,11 @@ tbody tr:nth-child(2n) {
     color: white; /* Text color */
     padding: 8px 10px;
     border-radius: 10px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
 }
 #toggleBorderButton button:hover {
     background-color: rgba(15, 134, 182, 1);
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 #pesos{
@@ -494,7 +489,7 @@ header .img {
     height: fit-content;
 
     img:hover{
-        transform: scale(1.02);
+        transform: scale(1.05);
        
     }
     #image{
